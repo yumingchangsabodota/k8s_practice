@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "flask_k8s_practice"
+version = "0.1.0"
+description = ""
+authors = ["Yu-Ming Chang <z1e2r3o4o5n6e7@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+Flask = "^2.1.2"
+requests = "^2.27.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

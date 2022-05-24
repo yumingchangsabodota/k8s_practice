@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coingecko-api
+
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: coingecko-api
+  template:
+    metadata:
+      labels:
+        app: coingecko-api
+    spec:
+      containers:
+        - name: coingecko-api-container
+          image: coin_gecko_api
+          imagePullPolicy: Never
+          ports:
+          - containerPort: 5001
+            protocol: TCP
