@@ -15,10 +15,15 @@ def index():
 
 
 def get_price(crypto_id='polkadot', currency='usd'):
-    request_url = f"https://api.coingecko.com/api/v3/simple/price?ids={crypto_id}&vs_currencies={currency}"
-    response = requests.get(url=request_url)
-    res = response.json()
-    return res
+    crypto = {'bitcoin':'usd'}
+    crypto[crypto_id] = currency
+    ans = []
+    for k,v in crypto.items():
+        request_url = f"https://api.coingecko.com/api/v3/simple/price?ids={k}&vs_currencies={v}"
+        response = requests.get(url=request_url)
+        res = response.json()
+        ans.append(res)
+    return ans
 
 if __name__ == "__main__":
     app.run(port=5001, host="0.0.0.0")

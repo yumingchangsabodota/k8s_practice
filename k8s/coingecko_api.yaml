@@ -15,8 +15,8 @@ spec:
     spec:
       containers:
         - name: coingecko-api-container
-          image: coingecko-api
-          imagePullPolicy: Never
+          image: ymcsabo/coingecko-api:latest
+          imagePullPolicy: Always
           ports:
           - containerPort: 5001
             protocol: TCP

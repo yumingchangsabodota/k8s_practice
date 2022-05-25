@@ -6,13 +6,15 @@
 <div class='container-fluid'>
     <div class="position-absolute top-50 start-50 translate-middle">
         <p>From k8s instance: {{instance}}</p>
-        {% for k,v in prices.items() %}
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-            <h5 class="card-title">{{ k }}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{ v.usd }} USD</h6>
+        {% for c in prices %}
+            {% for k,v in c.items() %}
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                <h5 class="card-title">{{ k }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ v.usd }} USD</h6>
+                </div>
             </div>
-        </div>
+            {% endfor %}
         {% endfor %}
     </div>
 </div>

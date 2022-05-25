@@ -1,5 +1,8 @@
 build_img:
-	docker build -t coingecko-api . --no-cache
+	docker build -t ymcsabo/coingecko-api . --no-cache
+
+push_img:
+	docker push ymcsabo/coingecko-api:latest
 
 run_api:
 	docker run -d -p 5001:5001 --name coingecko-api coingecko-api
