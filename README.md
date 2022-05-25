@@ -41,3 +41,9 @@ kubectl create -f k8s/coingecko_api_ingress.yaml
 
 ### apply change
 kubectl apply -f k8s/coingecko_api_ingress.yaml
+
+
+### Cluster steps
+Componets: Deployment -> Service -> Ingress
+start minikube -> load image -> deploy
+corresponding make commands: init_minikube -> load_img -> k8s_api
