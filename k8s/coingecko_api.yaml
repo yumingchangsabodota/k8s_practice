@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: coingecko-api-container
-          image: coin_gecko_api
+          image: coingecko-api
           imagePullPolicy: Never
           ports:
           - containerPort: 5001
