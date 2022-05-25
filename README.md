@@ -12,7 +12,7 @@ minikube start --driver=docker
 ### enalbe ingress
 minikube addons enable ingress
 
-## run ingress tunnel 
+### run ingress tunnel 
 minikube tunnel
 
 ### get ingress nginx
